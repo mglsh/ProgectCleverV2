@@ -14,7 +14,10 @@
 
 	<packaging>war</packaging>
 	<name>CleverV2</name>
+
 	<description>Clever</description>
+
+
 
 	<properties>
 		<java.version>11</java.version>
@@ -74,6 +77,11 @@
 				<groupId>com.heroku.sdk</groupId>
 				<artifactId>heroku-maven-plugin</artifactId>
 				<version>2.0.15</version>
+                <configuration>
+                    <processTypes>
+                        <web>java $JAVA_OPTS -cp target/classes:target/dependency/* CleverV2Application</web>
+                    </processTypes>
+                </configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -81,5 +89,8 @@
 			</plugin>
 
 		</plugins>
+
+
 	</build>
+
 </project>
