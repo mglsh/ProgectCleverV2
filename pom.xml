@@ -80,6 +80,7 @@
                 <configuration>
                     <processTypes>
                         <web>java $JAVA_OPTS -cp target/classes:target/dependency/*CleverV2Application</web>
+						<port>HTTP</port>
                     </processTypes>
                 </configuration>
 			</plugin>
